@@ -16,6 +16,8 @@ interface ServiceGridItem {
   id: number;
   title: string;
   description: string;
+  image_url?: string | null;
+  image_alt?: string | null;
   sort_order: number;
 }
 

@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
 import { RoboAnimation } from "./robo-animation";
 import { Facebook, Youtube, Instagram, Sparkles, Anchor } from "lucide-react";
+import { useSocialLinks } from "../hooks/useSocialLinks";
 
 // Componente para el logo del robot (versión estática para el footer)
 const RobotLogo = () => (
@@ -91,17 +91,29 @@ interface SocialIconProps {
   ariaLabel: string;
 }
 
-const SocialIcon = ({ icon, href = "#", ariaLabel }: SocialIconProps) => (
-  <a
-    href={href}
-    aria-label={ariaLabel}
-    className="w-10 h-10 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center text-white transition-colors duration-300"
-  >
-    {icon}
-  </a>
-);
+const SocialIcon = ({ icon, href, ariaLabel }: SocialIconProps) => {
+  if (!href) return null;
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={ariaLabel}
+      className="w-10 h-10 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center text-white transition-colors duration-300"
+    >
+      {icon}
+    </a>
+  );
+};
+
+const platformIcons: Record<string, { icon: React.ReactNode; label: string }> = {
+  facebook: { icon: <Facebook className="w-5 h-5" />, label: "Facebook" },
+  youtube: { icon: <Youtube className="w-5 h-5" />, label: "YouTube" },
+  instagram: { icon: <Instagram className="w-5 h-5" />, label: "Instagram" },
+};
 
 export default function Footer() {
+  const { links: socialLinks } = useSocialLinks();
   const linkSections = {
     link: [
       { label: "Quienes somos", href: "/about" },
@@ -157,23 +169,20 @@ export default function Footer() {
               </a>
             </div>
 
-            {/* Redes sociales */}
+            {/* Redes sociales (URLs desde Supabase) */}
             <div className="flex gap-3 mt-4">
-              <SocialIcon
-                icon={<Facebook className="w-5 h-5" />}
-                href="https://facebook.com"
-                ariaLabel="Facebook"
-              />
-              <SocialIcon
-                icon={<Youtube className="w-5 h-5" />}
-                href="https://youtube.com"
-                ariaLabel="YouTube"
-              />
-              <SocialIcon
-                icon={<Instagram className="w-5 h-5" />}
-                href="https://instagram.com"
-                ariaLabel="Instagram"
-              />
+              {socialLinks.map((item) => {
+                const { icon, label } = platformIcons[item.platform] ?? {};
+                if (!icon) return null;
+                return (
+                  <SocialIcon
+                    key={item.id}
+                    icon={icon}
+                    href={item.url}
+                    ariaLabel={label}
+                  />
+                );
+              })}
             </div>
           </div>
 

@@ -10,6 +10,8 @@ interface ServiceItem {
   title: string;
   description: string;
   icon: ReactNode;
+  image_url?: string | null;
+  image_alt?: string | null;
 }
 
 // Iconos definidos en el componente (mantienen estructura visual/CSS)
@@ -101,16 +103,24 @@ const ServiceCard = ({
       transition={{ duration: 0.6, delay: index * 0.15 }}
       className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 rounded-xl border border-purple-500/20 p-6 md:p-8 hover:border-purple-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 hover:scale-105"
     >
-      {/* Ilustración */}
-      <div className="flex justify-center mb-6 h-40 md:h-48 items-center">
+      {/* Imagen (Supabase) o ilustración por defecto */}
+      <div className="flex justify-center mb-6 h-40 md:h-48 items-center overflow-hidden rounded-lg bg-gray-800/50">
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: index * 0.15 + 0.2 }}
-          className="relative"
+          className="relative w-full h-full"
         >
-          {service.icon}
+          {service.image_url ? (
+            <img
+              src={service.image_url}
+              alt={service.image_alt || service.title}
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            service.icon
+          )}
         </motion.div>
       </div>
 

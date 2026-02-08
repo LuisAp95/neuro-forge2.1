@@ -39,6 +39,8 @@ CREATE TABLE services_grid (
   id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
   title TEXT NOT NULL,
   description TEXT NOT NULL,
+  image_url TEXT,
+  image_alt TEXT,
   sort_order INT DEFAULT 0
 );
 
