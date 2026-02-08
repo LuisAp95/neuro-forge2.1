@@ -20,7 +20,7 @@ export default function Navbar() {
       >
         <Link to="/" className="flex items-center space-x-2">
           <Bot className="w-8 h-8 text-purple-500" />
-          <span className="text-white font-medium text-xl">Neuro Forgue</span>
+          <span className="text-white font-medium text-xl">Neuro Forge</span>
         </Link>
         <div className="hidden md:flex items-center space-x-8 text-white">
           {INTERNAL_NAV_LINKS.map((item) => (
