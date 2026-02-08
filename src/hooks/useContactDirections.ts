@@ -31,12 +31,12 @@ export function useContactDirections() {
 
     async function fetchDirections() {
       try {
-        const { data, err } = await supabase
+        const { data, error } = await supabase
           .from("contact_url_directions")
           .select("*")
           .order("sort_order", { ascending: true });
 
-        if (err) throw err;
+        if (error) throw error;
         const list = (data || []) as ContactDirection[];
         set(CACHE_KEY, list);
         setDirections(list);

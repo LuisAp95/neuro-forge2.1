@@ -81,9 +81,9 @@ const AboutContent = ({ hero }: { hero: any }) => {
         transition={{ duration: 0.6, delay: 0.5 }}
         className="pt-4"
       >
-        <button className="btn-secondary text-lg uppercase tracking-wider">
+        {/* <button className="btn-secondary text-lg uppercase tracking-wider">
           {hero.ctaButton}
-        </button>
+        </button>*/}
       </motion.div>
     </div>
   );

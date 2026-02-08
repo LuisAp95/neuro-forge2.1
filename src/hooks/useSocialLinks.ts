@@ -30,12 +30,12 @@ export function useSocialLinks() {
 
     async function fetchLinks() {
       try {
-        const { data, err } = await supabase
+        const { data, error } = await supabase
           .from("social_links")
           .select("*")
           .order("sort_order", { ascending: true });
 
-        if (err) throw err;
+        if (error) throw error;
         const list = (data || []) as SocialLink[];
         set(CACHE_KEY, list);
         setLinks(list);
