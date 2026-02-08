@@ -33,6 +33,7 @@ interface Tool {
   id: number;
   name: string;
   sort_order: number;
+  image_url?: string | null;
 }
 
 interface ContentBlocks {

@@ -1,0 +1,8 @@
+# NeuroForge - robots.txt
+# https://developers.google.com/search/docs/crawling-indexing/robots/create-robots-txt
+
+User-agent: *
+Allow: /
+
+# Sitemap (reemplaza con tu dominio real cuando lo tengas)
+Sitemap: https://www.neuroforge.com/sitemap.xml

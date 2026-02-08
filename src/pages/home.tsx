@@ -6,6 +6,7 @@ import FeaturesSection from "../componentes/FeaturesSection";
 import AboutMeSection from "../componentes/AboutMeSection";
 import TestimonialsSection from "../componentes/TestimonialsSection";
 import ContactSection from "../componentes/ContactSection";
+import { SEO } from "../componentes/SEO";
 import { useHomeData } from "../hooks/useHomeData";
 import {
   HeroSkeleton,
@@ -35,6 +36,11 @@ export default function Home() {
 
   return (
     <>
+      <SEO
+        title="NeuroForge | IA, Automatización y Asistentes Virtuales"
+        description="Soluciones de inteligencia artificial y automatización para tu negocio. Chatbots multicanal, asistentes virtuales y soporte con IA. Impulsa tu carrera con herramientas IA."
+        path="/"
+      />
       <Hero />
       {/* Nueva sección con texto e imagen */}
       <section className="relative py-20 px-6 min-h-[600px]">

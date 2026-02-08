@@ -48,6 +48,7 @@ Si montas la base desde cero en Supabase:
 2. **002_seed_data.sql** — Cargar datos iniciales.
 3. **003_contact_url_directions.sql** — Tabla y dato de contacto.
 4. **004_about_mission.sql** — Bloque "Nuestra Misión" (usa `ON CONFLICT` para no duplicar).
+5. **007_tools_image_url.sql** — Añade columna `image_url` a `tools` (logos desde Storage).
 
 No hace falta re-ejecutar 001 ni 003 una vez creadas las tablas. Los datos que quieras cambiar los editas en el **Table Editor** o con SQL puntual.
 
@@ -181,11 +182,13 @@ No hace falta re-ejecutar 001 ni 003 una vez creadas las tablas. Los datos que q
 | `id` | BIGINT (auto) | Clave primaria |
 | `name` | TEXT | Nombre de la herramienta (ej. "make", "Airtable") |
 | `sort_order` | INT | Orden |
+| `image_url` | TEXT (opcional) | URL del logo (Supabase Storage → `images/tools/` o URL externa). Si es NULL se muestra el nombre como texto. |
 
 **Qué puedes modificar:**
 
 - Añadir, editar o borrar herramientas.
 - Reordenar con `sort_order`.
+- Asignar logo: sube la imagen en Storage → `images/tools/`, copia la URL pública y pégala en `image_url`. Si la tabla no tiene la columna, ejecuta **007_tools_image_url.sql**.
 
 **Dónde se usa:** página Servicios, sección "Herramientas que usamos" (hook `useServicesData` → `tools`).
 
@@ -446,7 +449,7 @@ Si en el futuro quieres que solo un “admin” pueda escribir:
 | Cambiar servicios del slider | `slider_services` | Table Editor o SQL; `implementacion` y `beneficios` son JSONB array |
 | Cambiar textos de “Nuestra Misión” | `content_blocks` (page=about, section=mission) | Editar `content` o reemplazar con UPDATE |
 | Cambiar foto o texto de la fundadora | `content_blocks` (page=about, section=founder) | Editar `content` (paragraphs, imageUrl, imageAlt) |
-| Añadir herramienta (Make, Airtable…) | `tools` | Insert en `tools` con `name` y `sort_order` |
+| Añadir herramienta (Make, Airtable…) | `tools` | Insert en `tools` con `name`, `sort_order` y opcionalmente `image_url` (URL del logo). Ejecutar 007 si no existe la columna. |
 | Cambiar títulos de sección en Servicios | `content_blocks` (page=services, section=slider/stats/servicesGrid/tools) | Editar el `content` del bloque correspondiente |
 
 ---
@@ -459,5 +462,6 @@ Si en el futuro quieres que solo un “admin” pueda escribir:
 | **002_seed_data.sql** | Inserta datos en todas esas tablas y en content_blocks (home, about, services). |
 | **003_contact_url_directions.sql** | Crea tabla contact_url_directions, RLS, política de lectura e inserta una fila “Agendar consulta” con URL Calendly. |
 | **004_about_mission.sql** | Inserta o actualiza (ON CONFLICT) el bloque about/mission en content_blocks. |
+| **007_tools_image_url.sql** | Añade la columna `image_url` a la tabla `tools` para mostrar logos desde Storage. |
 
 Con esta guía puedes modificar todo el contenido que vive en Supabase (textos, URLs, imágenes, orden y listas) desde el Table Editor o con SQL, sin tocar código salvo que cambies la estructura de los JSON en `content_blocks` o añadas nuevas secciones/páginas en el frontend.
