@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -9,5 +9,5 @@ export default defineConfig({
     port: 5173,
     // Or, specify a specific IP address:
     // host: '192.168.1.100',
-}
-})
+  },
+});

@@ -1,0 +1,42 @@
+{
+  "hero": {
+    "titleHighlight": "Acerca de",
+    "titleMain": "Neuro Forge",
+    "subtitle": "Tecnología con propósito. Automatización con visión humana.",
+    "paragraph1": "En Neuro Forge ayudamos a negocios y profesionales a simplificar procesos, escalar proyectos y capacitarse para el futuro del trabajo. Somos un proyecto de vanguardia especializada en automatización, inteligencia artificial (IA) para la atención al cliente y asesorías digitales personalizadas.",
+    "paragraph2": "Nos apasiona el impacto positivo de la tecnología: menos tareas repetitivas, más tiempo para crear, conectar y crecer.",
+    "ctaButton": "Saber más",
+    "robotPlaceholder": "Imagen del robot por agregar"
+  },
+  "whatWeDo": {
+    "title": "¿Qué hacemos?",
+    "intro": "Ofrecemos servicios que combinan estrategia, herramientas y formación:",
+    "rocketPlaceholder": "Imagen del cohete por agregar",
+    "services": [
+      {
+        "title": "Optimización de procesos con IA y automatización",
+        "description": "Diseñamos soluciones personalizadas que aumentan tu productividad, reducen tareas repetitivas y liberan tiempo valioso."
+      },
+      {
+        "title": "Consultoría en transformación digital",
+        "description": "Te acompañamos en la adopción inteligente de herramientas tecnológicas que impulsan un crecimiento sostenible y escalable."
+      },
+      {
+        "title": "Formación para asistentes virtuales",
+        "description": "Capacitamos a la nueva generación de profesionales digitales con programas prácticos en automatización, IA y tecnología aplicada."
+      }
+    ]
+  },
+  "founder": {
+    "title": "Sobre la fundadora",
+    "paragraph1": "Durante años trabajé en administración y atención al cliente, resolviendo tareas repetitivas y sintiendo que el tiempo no me alcanzaba. Aunque disfrutaba ayudar a otros, sabía que necesitaba una forma de trabajar más eficiente y con mayor libertad.",
+    "paragraph2": "Fue entonces cuando descubrí el mundo de la automatización y la inteligencia artificial. Empecé a experimentar con herramientas como Make y ChatGPT, y poco a poco, todo cambió. Recuperé tiempo, energía y una nueva visión profesional que hoy comparto con otros.",
+    "paragraph3": "Así nació NeuroForge, un espacio donde ayudo a emprendedores, equipos y asistentes virtuales a integrar tecnología de manera simple, práctica y estratégica para construir negocios más sostenibles y libres.",
+    "highlightQuote": "No se trata solo de trabajar mejor... se trata de vivir mejor.",
+    "imageAlt": "Fundadora de Neuro Forge"
+  },
+  "officePhoto": {
+    "imageAlt": "Oficina de trabajo",
+    "placeholderText": "Imagen por agregar"
+  }
+}

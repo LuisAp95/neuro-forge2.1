@@ -1,0 +1,60 @@
+{
+  "hero": {
+    "titleLine1": "Impulsa tu Carrera con",
+    "titleHighlight": "Herramientas IA",
+    "subtitle": "Desarrolla tu futuro profesional con inteligencia artificial y disfruta de la libertad de trabajar desde cualquier lugar. Conviértete en asistente virtual en IA",
+    "ctaPrimary": "Mis Servicios",
+    "ctaSecondary": "Contactame"
+  },
+  "introSection": {
+    "title": "Transformamos Ideas en",
+    "titleHighlight": "Realidad Digital",
+    "paragraph1": "En NeuroForge, combinamos inteligencia artificial y automatización para crear soluciones innovadoras que impulsan tu negocio hacia el futuro. Nuestro equipo de expertos trabaja incansablemente para ofrecerte herramientas de IA de última generación.",
+    "paragraph2": "Desde asistentes virtuales hasta sistemas de automatización complejos, transformamos procesos manuales en flujos de trabajo inteligentes que ahorran tiempo y aumentan la productividad."
+  },
+  "features": {
+    "sectionTitle": "Esto es lo que",
+    "titleHighlight": "hacemos",
+    "subtitle": "Nuestros servicios en inteligencia artificial y automatización.",
+    "items": [
+      {
+        "title": "AUTOMATIZA ATENCION AL CLIENTE",
+        "description": "Optimiza tiempos, reduce costos y ofrece respuestas inmediatas con agentes virtuales automatizados.",
+        "buttonText": "Saber mas"
+      },
+      {
+        "title": "CHATBOTS MULTICANAL CON IA",
+        "description": "Automatiza conversaciones en múltiples plataformas, reduce errores y mejora tu atención.",
+        "buttonText": "Saber mas"
+      },
+      {
+        "title": "SOLUCIONES DE SOPORTE IA",
+        "description": "Automatiza procesos, personaliza experiencias y toma decisiones basadas en datos.",
+        "buttonText": "Saber más"
+      }
+    ]
+  },
+  "aboutMe": {
+    "title": "Sobre mí",
+    "paragraph1": "Soy Roxana Aparicio, especialista en automatización y tecnología sin complicaciones.",
+    "paragraph2": "Con más de 7 años de experiencia en administración y atención al cliente, hoy ayudo a emprendedores y equipos a integrar herramientas como Make y ChatGPT para trabajar mejor, escalar más rápido y ganar libertad.",
+    "buttonText": "Saber mas",
+    "imageAlt": "Roxana Aparicio"
+  },
+  "testimonials": {
+    "sectionTitle": "Esto dicen nuestros",
+    "titleHighlight": "clientes"
+  },
+  "contact": {
+    "title": "Transforma tu",
+    "titleHighlight": "enfoque",
+    "titleSuffix": ", no tu carga de trabajo",
+    "ctaButton": "Agenda una consulta",
+    "academyLevels": [
+      { "level": "FOUNDATION", "stars": 1 },
+      { "level": "BASICS", "stars": 2 },
+      { "level": "INTERMEDIATE", "stars": 3 },
+      { "level": "ADVANCED", "stars": 3 }
+    ]
+  }
+}

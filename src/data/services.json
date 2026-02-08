@@ -1,0 +1,115 @@
+{
+  "slider": {
+    "titlePart1": "Esto es lo",
+    "titleHighlight": "que hacemos",
+    "implementLabel": "Cómo lo implementamos:",
+    "benefitsLabel": "Beneficios",
+    "services": [
+      {
+        "id": 1,
+        "title": "IA para tu Organización",
+        "description": "Aumenta la eficiencia, optimiza procesos y elimina tareas repetitivas con inteligencia artificial.",
+        "descriptionCompleta": "La inteligencia artificial (IA) es una herramienta poderosa que transforma la manera en que operan las organizaciones. Con nuestras soluciones de IA personalizadas, no solo optimizamos tus procesos internos, sino que también mejoramos la eficiencia general de tu equipo. Al integrar IA en tareas repetitivas y procesos manuales, conseguimos que tu personal se enfoque en tareas más estratégicas y creativas, mientras que la IA se encarga de las labores automáticas. Desde chatbots para atención al cliente hasta sistemas predictivos que analizan grandes volúmenes de datos, nuestra IA está diseñada para hacer tu organización más ágil, escalable y eficiente.",
+        "implementacion": [
+          "Análisis y diagnóstico de tus procesos para identificar oportunidades de automatización.",
+          "Implementación de soluciones IA adaptadas a las necesidades específicas de tu negocio.",
+          "Entrenamiento y soporte continuo para garantizar una integración exitosa."
+        ],
+        "beneficios": [
+          "Ahorro de tiempo en tareas manuales y repetitivas.",
+          "Mejora en la toma de decisiones gracias a los análisis predictivos y análisis de datos en tiempo real.",
+          "Reducción de costos operativos y errores humanos, permitiendo a tu equipo enfocarse en lo que realmente importa."
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Automatiza tu Proceso",
+        "description": "Automatiza procesos, ahorra tiempo, reduce errores y disminuye costos con soluciones personalizadas.",
+        "descriptionCompleta": "La automatización es la clave para mejorar la productividad, reducir errores y optimizar los recursos dentro de cualquier empresa. A través de soluciones personalizadas, analizamos tus procesos de trabajo y diseñamos flujos de trabajo automáticos que eliminan tareas repetitivas y manuales. Automatizamos desde la gestión de tareas diarias hasta procesos complejos, utilizando herramientas que no solo optimizan el tiempo, sino que también mejoran la precisión en cada tarea. Ya sea en ventas, gestión de proyectos o atención al cliente, nuestra automatización ayuda a que tu organización sea más eficiente y rentable.",
+        "implementacion": [
+          "Análisis detallado de los procesos y tareas repetitivas dentro de tu empresa.",
+          "Diseño e implementación de flujos de trabajo automatizados con herramientas personalizadas.",
+          "Capacitación y soporte para una transición sin problemas y un uso óptimo de las soluciones automatizadas."
+        ],
+        "beneficios": [
+          "Ahorro significativo de tiempo y recursos en la gestión de procesos manuales.",
+          "Mayor precisión y reducción de errores operativos.",
+          "Escalabilidad de tu negocio sin necesidad de aumentar el personal, reduciendo costos a largo plazo."
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Gestiona tu CRM",
+        "description": "Implementamos bases de datos relacionales para gestionar proyectos, contactos y equipos de forma fácil, intuitiva y segura.",
+        "descriptionCompleta": "Un sistema de gestión de relaciones con clientes (CRM) eficiente es vital para cualquier organización que busque mantener relaciones duraderas con sus clientes y mejorar su desempeño. Implementamos bases de datos relacionales avanzadas que no solo organizan tus proyectos y contactos, sino que también proporcionan una visión 360 grados de cada cliente, optimizando la comunicación y las interacciones. Con un CRM bien gestionado, tu equipo podrá acceder a datos clave de manera rápida y eficiente, mejorando la atención al cliente, las ventas y la toma de decisiones estratégicas.",
+        "implementacion": [
+          "Diseño e implementación de bases de datos relacionales adaptadas a tus necesidades específicas.",
+          "Integración de tu CRM con otros sistemas internos, como el sistema de gestión de proyectos o software de comunicación.",
+          "Capacitación a tu equipo para utilizar eficazmente el CRM y maximizar su rendimiento."
+        ],
+        "beneficios": [
+          "Mejora en la organización y acceso a la información de clientes y proyectos.",
+          "Optimización en la toma de decisiones con datos accesibles y actualizados.",
+          "Seguridad avanzada para proteger la información sensible de clientes y proyectos."
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Contrata una Asistente IA",
+        "description": "Optimiza la gestión de tu organización con una asistente virtual basada en IA para tareas administrativas, atención al cliente y más.",
+        "descriptionCompleta": "La asistencia virtual mediante inteligencia artificial está cambiando la forma en que las empresas gestionan sus tareas diarias. Ofrecemos asistentes IA altamente especializados que pueden encargarse de diversas funciones, como la gestión de agendas, la atención al cliente, el manejo de correos electrónicos, y mucho más. Nuestras asistentes IA están diseñadas para aprender y adaptarse a las necesidades de tu empresa, mejorando la eficiencia en tareas administrativas y brindando soporte a tu equipo 24/7. Además, nuestras soluciones son escalables, lo que significa que tu asistente IA puede crecer junto con tu empresa.",
+        "implementacion": [
+          "Reducción de la carga de trabajo administrativa, permitiendo a tu equipo enfocarse en tareas de mayor impacto.",
+          "Respuesta instantánea a las consultas de clientes, mejorando la experiencia del usuario.",
+          "Ahorro de recursos, ya que no es necesario contratar personal adicional para tareas repetitivas y operativas."
+        ],
+        "beneficios": [
+          "Reducción de la carga de trabajo administrativa, permitiendo a tu equipo enfocarse en tareas de mayor impacto.",
+          "Respuesta instantánea a las consultas de clientes, mejorando la experiencia del usuario.",
+          "Ahorro de recursos, ya que no es necesario contratar personal adicional para tareas repetitivas y operativas."
+        ]
+      }
+    ]
+  },
+  "stats": {
+    "titlePart1": "Números que",
+    "titleHighlight": "importan",
+    "items": [
+      { "value": 350, "label": "CLIENTES FELICES", "suffix": "+" },
+      { "value": 100, "label": "PROYECTOS HECHOS", "suffix": "+" },
+      { "value": 20, "label": "HERRAMIENTAS INTEGRADAS", "suffix": "+" },
+      { "value": 100, "label": "CAPACITACIONES", "suffix": "+" }
+    ]
+  },
+  "servicesGrid": {
+    "titlePart1": "Nuestros",
+    "titleHighlight": "Servicios",
+    "subtitle": "Soluciones innovadoras diseñadas para transformar tu negocio",
+    "items": [
+      {
+        "id": "1",
+        "title": "AUTOMATIZA ATENCIÓN AL CLIENTE",
+        "description": "Transforma la experiencia de tus clientes con sistemas automatizados de atención que responden 24/7, reducen tiempos de espera y mejoran la satisfacción del cliente."
+      },
+      {
+        "id": "2",
+        "title": "CHATBOTS MULTICANAL CON IA",
+        "description": "Implementa chatbots inteligentes que se integran en múltiples canales de comunicación, ofreciendo respuestas coherentes y personalizadas en cada punto de contacto."
+      },
+      {
+        "id": "3",
+        "title": "SOLUCIONES DE SOPORTE IA",
+        "description": "Desarrolla sistemas de soporte técnico potenciados por IA que optimizan procesos, automatizan respuestas y mejoran la eficiencia operativa de tu equipo."
+      }
+    ]
+  },
+  "tools": {
+    "titlePart1": "Herramientas",
+    "titleHighlight": "que usamos",
+    "items": [
+      { "id": "1", "name": "make" },
+      { "id": "2", "name": "Airtable" },
+      { "id": "3", "name": "Chat" }
+    ]
+  }
+}

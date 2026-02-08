@@ -1,9 +1,16 @@
 @import "tailwindcss";
 
+html,
+body {
+  overflow-x: hidden;
+}
 
 :root {
   --background: 222.2 84% 4.9%;
   --foreground: 210 40% 98%;
+  /* Gradiente estándar para textos (from-red-400 to-pink-600) */
+  --text-gradient-from: #f87171;
+  --text-gradient-to: #db2777;
   --card: 222.2 84% 4.9%;
   --card-foreground: 210 40% 98%;
   --popover: 222.2 84% 4.9%;
@@ -21,11 +28,58 @@
   --border: 217.2 32.6% 17.5%;
   --input: 217.2 32.6% 17.5%;
   --ring: 224.3 76.3% 48%;
+  /* Botones: mismo morado en toda la app - modificar aquí para cambiar todos */
+  --btn-purple: #9333ea;
+  --btn-purple-hover: #7e22ce;
+  --btn-purple-border: #a855f7;
+}
+
+/* Botones centralizados: morado + redondeado */
+.btn-primary {
+  background-color: var(--btn-purple);
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border: none;
+  font-weight: 500;
+}
+.btn-primary:hover {
+  background-color: var(--btn-purple-hover);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    border-color 0.2s;
+  border: 2px solid var(--btn-purple-border);
+}
+.btn-secondary:hover {
+  background-color: rgba(168, 85, 247, 0.2);
+}
+
+/* Clase centralizada para gradientes de texto - modificar aquí para cambiar todos */
+.text-gradient {
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(
+    to right,
+    var(--text-gradient-from),
+    var(--text-gradient-to)
+  );
 }
 
 .bg-grid-white\/\[0\.02\] {
   background-size: 30px 30px;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
 }
 
@@ -44,6 +98,32 @@
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
-.custon-scrollbar::-webkit-scrollbar{
+.custon-scrollbar::-webkit-scrollbar {
   display: none;
+}
+
+/* Skeleton loading: shimmer sin afectar colores/theme existentes */
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    hsl(var(--muted)) 0%,
+    hsl(var(--muted) / 0.6) 50%,
+    hsl(var(--muted)) 100%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.5s ease-in-out infinite;
+  border-radius: 0.25rem;
+}
+
+.skeleton-circle {
+  border-radius: 9999px;
 }

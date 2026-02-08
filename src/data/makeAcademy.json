@@ -1,0 +1,31 @@
+{
+  "makeAcademy": {
+    "title": "Make Academy",
+    "levels": [
+      {
+        "id": 1,
+        "level": "FOUNDATION",
+        "stars": 1,
+        "image": "https://trello.com/1/cards/67dcbc5b163d4b2490345151/attachments/68175dfb7accb4bed6de07f6/download/Sin_t%C3%ADtulo_(1200_x_1500_px)_(11).png"
+      },
+      {
+        "id": 2,
+        "level": "BASICS",
+        "stars": 2,
+        "image": "https://trello.com/1/cards/67dcbc5b163d4b2490345151/attachments/68175e1f0825b860387e64c7/download/Sin_t%C3%ADtulo_(1200_x_1500_px)_(10).png"
+      },
+      {
+        "id": 3,
+        "level": "INTERMEDIATE",
+        "stars": 3,
+        "image": "https://trello.com/1/cards/67dcbc5b163d4b2490345151/attachments/68175dfbfe421043e9e07f57/download/Sin_t%C3%ADtulo_(1200_x_1500_px)_(12).png"
+      },
+      {
+        "id": 4,
+        "level": "ADVANCED",
+        "stars": 3,
+        "image": "https://trello.com/1/cards/67dcbc5b163d4b2490345151/attachments/68175dfb0825b860387e0697/download/Sin_t%C3%ADtulo_(1200_x_1500_px)_(13).png"
+      }
+    ]
+  }
+}

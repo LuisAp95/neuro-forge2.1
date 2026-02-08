@@ -1,8 +1,20 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { FloatingPaper } from "./floating-paper";
 import { RoboAnimation } from "./robo-animation";
+import { useHomeData } from "../hooks/useHomeData";
+import { useContactDirections } from "../hooks/useContactDirections";
+import { HeroSkeleton } from "./skeletons";
 
 export default function Hero() {
+  const { data, loading } = useHomeData();
+  const { primaryUrl } = useContactDirections();
+  const hero = data.hero || {};
+
+  if (loading) {
+    return <HeroSkeleton />;
+  }
+
   return (
     <div className="relative min-h-[calc(100vh-76px)] flex items-center">
       {/* Floating papers background */}
@@ -18,10 +30,8 @@ export default function Hero() {
             transition={{ duration: 0.5 }}
           >
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
-              Impulsa tu Carrera con
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-                Herramientas IA
-              </span>
+              {hero.titleLine1}
+              <span className="text-gradient ml-4">{hero.titleHighlight}</span>
             </h1>
           </motion.div>
 
@@ -31,9 +41,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-gray-400 text-xl mb-8 max-w-2xl mx-auto"
           >
-            Desarrolla tu futuro profesional con inteligencia artificial y
-            disfruta de la libertad de trabajar desde cualquier lugar.
-            Conviértete en asistente virtual en IA
+            {hero.subtitle}
           </motion.p>
 
           <motion.div
@@ -42,12 +50,26 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-6"
           >
-            <div className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-3 cursor-pointer ">
-              Mis Servicios
-            </div>
-            <div className="text-white border-purple-500 hover:bg-purple-500/20 px-4 py-3 cursor-pointer">
-              Contactame
-            </div>
+            <Link to="/services" className="btn-primary">
+              {hero.ctaPrimary}
+            </Link>
+            {primaryUrl ? (
+              <a
+                href={primaryUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-secondary"
+              >
+                {hero.ctaSecondary}
+              </a>
+            ) : (
+              <span
+                className="btn-secondary opacity-70 cursor-not-allowed"
+                title="Configura la URL en Supabase"
+              >
+                {hero.ctaSecondary}
+              </span>
+            )}
           </motion.div>
         </div>
       </div>
